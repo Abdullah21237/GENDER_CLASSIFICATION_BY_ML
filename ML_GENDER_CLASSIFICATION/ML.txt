@@ -1,0 +1,111 @@
+Documentation Report 
+Gender Classification using Machine Learning
+
+Introduction
+
+This documentation report outlines the key phases of the process for a gender classification task using machine learning. The goal is to classify images of individuals as either "male" or "female" based on facial features. The report includes details about data collection, preprocessing, model training, and evaluation. It also presents performance metrics, including accuracy, precision, recall, and F1-score, for each model. The report concludes with a summary of findings.
+
+Data Collection
+
+Data Source
+The dataset used for this gender classification task Downloaded from Kaggle and stored in the following directory structure:
+
+  - `Train (5441 images) `: Contains training images grouped by gender.
+  - `Test (4482 images) `: Contains test images grouped by gender.
+  - `Validation (2197 images) `: Contains validation images grouped by gender.
+
+The dataset consists of facial images categorized into "male" and "female" classes.
+Image Preprocessing
+- Images were loaded and preprocessed using the following steps:
+  - Images were opened and converted to RGB format.
+  - Resized to a common size of 64x64 pixels (adjustable).
+  - Converted to NumPy arrays for further processing.
+
+Data Splitting
+The dataset was divided into three sets:
+- Training Set (X_train, y_train): Used to train the machine learning models.
+- Validation Set (X_val, y_val): Used to tune hyper parameters and evaluate model performance during training.
+- Test Set (X_test, y_test): Used to assess the final model's generalization performance.
+
+Data Label Encoding
+- Class labels "male" and "female" were encoded as numerical values:
+  - "male" -> 0
+  - "female" -> 1
+  - Label encoding was performed using the `LabelEncoder` from Scikit-Learn.
+
+Model Selection and Training
+Four machine learning models were selected for this task:
+1. Decision Tree Classifier
+2. Random Forest Classifier
+3. K-Nearest Neighbors Classifier
+4. Support Vector Classifier (SVC)
+
+Model Training Loop
+- Each model was trained as follows:
+  - Image data was flattened to 1D arrays.
+  - The model was fitted to the training data (X_train_flat, y_train_encoded).
+  - Predictions were made on both the validation and test sets.
+  - Model performance metrics were computed for validation and test sets.
+
+
+
+Model Evaluation Metrics
+The following metrics were calculated for each model on the validation and test sets:
+- Accuracy: Measures the percentage of correctly classified samples.
+- Precision: Measures the model's ability to make precise positive predictions.
+- Recall: Measures the model's ability to identify all relevant instances.
+- F1-Score: A harmonic mean of precision and recall, balancing precision and recall.
+
+Results
+
+Model Performance Metrics
+
+Decision Tree Classifier
+- Validation Accuracy: [1.00]
+- Validation Precision: [1.00]
+- Validation Recall: [1.00]
+- Validation F1-Score: [1.00]
+- Test Accuracy: [1.00]
+- Test Precision: [1.00]
+- Test Recall: [1.00]
+- Test F1-Score: [1.00]
+
+Random Forest Classifier
+- Validation Accuracy: [1.00]
+- Validation Precision: [1.00]
+- Validation Recall: [1.00]
+- Validation F1-Score: [1.00]
+- Test Accuracy: [1.00]
+- Test Precision: [1.00]
+- Test Recall: [1.00]
+- Test F1-Score: [1.00]
+
+K-Nearest Neighbors Classifier
+- Validation Accuracy: [0.96]
+- Validation Precision: [0.96]
+- Validation Recall: [0.96]
+- Validation F1-Score: [0.96]
+- Test Accuracy: [0.95]
+- Test Precision: [0.95]
+- Test Recall: [0.95]
+- Test F1-Score: [0.95]
+
+Support Vector Classifier (SVC)
+- Validation Accuracy: [0.99]
+- Validation Precision: [0.99]
+- Validation Recall: [0.99]
+- Validation F1-Score: [0.99]
+- Test Accuracy: [0.99]
+- Test Precision: [0.99]
+- Test Recall: [0.99]
+- Test F1-Score: [0.99]
+
+Conclusion
+- The machine learning models were trained and evaluated for gender classification based on facial features.
+- [I Trained Total 4 Models:
+1. Decision Tree Classifier
+2. Random Forest Classifier
+3. K-Nearest Neighbors Classifier
+4. Support Vector Classifier (SVC)
+On the Basis of Results, The Accuracy of Decision Tree Classifier and Random Forest Classifier are the Best]
+If You Try to Train a ML Model for Classification I recommend you to Use Decision Tree Classifier.
